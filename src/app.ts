@@ -36,7 +36,7 @@ app.post("/api/point/collect", (req: Request, res: Response) => {
 
     //ถ้าไม่ถึง 100 ก็ไม่ได้แต้ม
     if (totalPrice >= 100) {
-      point = (totalPrice / 100) * 10;
+      point = Math.floor((totalPrice / 100) * 10);
     }
 
     totalPoint += point;
